@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/src/css/style.css">
     <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
     <title>Page Title</title>
 </head>
 
@@ -107,52 +108,92 @@
 <!--FIN CARDS-->
 
 
-
+<!--Carrousel-->
         <h3>Œuvres à découvrir !</h3>
-    <div class="carousel-container">
-<div class="carousel">
-        <figure>
-            <img src="../public/img/sagrada-familia1.webp" alt="Sagrada Família" />
-            <figcaption>
-                <h4>Sagrada Família</h4>
-                <p>1883 - 1926</p>
-            </figcaption>
-        </figure>
+
+        <div class="oeuvres">
+<div class="carousel-container" >
+    <div class="carousel">
+
+        <button aria-label="previousSlide" class="carousel__button carousel__button--prv">
+            <img  @click="$refs.parent.scrollLeft -= $refs.parent.clientWidth" src="../public/icon/chevron-left.svg" alt="Slide précédent" class="carousel__button--img">
+        </button>
+
+        <button aria-label="nextSlide" class="carousel__button carousel__button--nxt">
+            <img  @click="$refs.parent.scrollLeft += $refs.parent.clientWidth" src="../public/icon/chevron-right.svg" alt="Slide suivant" class="carousel__button--img">
+        </button>
+
+        <div class="carrousel__track" x-ref="parent" @scroll.debounce.50ms.passive="
+                        hrefCourant = '#'+[...$refs.parent.children].find(e=>e.getBoundingClientRect().x>=0).id">
+
+<!--cardes-->
+    <div id="card-1" class="carousel__card card">
+        <img class="card__img" src="../public/img/sagrada-familia1.webp" alt="Sagrada Família" >
+        <div class="card__caption caption">
+            <p class="caption__text">Sagrada Família</p>
+            <p class="caption__subtext">1883 - 1926</p>
+        </div>
+    </div>
     
-        <figure>
-            <img src="../public/img/Parc_guell1.webp" alt="Parc Güell" />
-            <figcaption>
-                <h4>Parc Güell</h4>
-                <p>1900 - 1914</p>
-            </figcaption>
-        </figure>
+    <div id="card-2" class="carousel__card card">
+        <img class="card__img" src="../public/img/Parc_guell1.webp" alt="Parc Güell"  >
+        <div class="card__caption caption">
+            <p class="caption__text">Parc Güell</p>
+            <p class="caption__subtext">1900 - 1914</p>
+        </div>
+    </div>
     
-        <figure>
-            <img src="../public/img/casa_batllo1.webp" alt="Casa Batlló" />
-            <figcaption>
-                <h4>Casa Batlló</h4>
-                <p>1904 - 1906</p>
-            </figcaption>
-        </figure>
+    <div id="card-3" class="carousel__card card">
+        <img class="card__img" src="../public/img/casa_batllo1.webp" alt="Casa Batlló" >
+        <div class="card__caption caption">
+            <p class="caption__text">Casa Batlló</p>
+            <p class="caption__subtext">1904 - 1906</p>
+        </div>
+    </div>
     
-        <figure>
-            <img src="../public/img/casa_mila1.webp" alt="Casa Milà" />
-            <figcaption>
-                <h4>Casa Milà</h4>
-                <p>1906 - 1910</p>
-                
-            </figcaption>
-        </figure>
+    <div id="card-4" class="carousel__card card">
+        <img class="card__img" src="../public/img/casa_mila1.webp" alt="Casa Milà" >
+        <div class="card__caption caption">
+            <p class="caption__text">Casa Milà</p>
+            <p class="caption__subtext">1906 - 1910</p>
+        </div>
+    </div>
     
-        <figure>
-            <img src="../public/img/palau_guell.webp" alt="Palau Güell" />
-            <figcaption>
-                <h4>Palau Güell</h4>
-                <p>1885 - 1890</p>
-               
-            </figcaption>
-        </figure>
+    <div id="card-5" class="carousel__card card">
+        <img class="card__img" src="../public/img/palau_guell.webp" alt="Palau Güell"  width="500" height="600">
+        <div class="card__caption caption">
+            <p class="caption__text">Palau Güell</p>
+            <p class="caption__subtext">1885 - 1890</p>
+        </div>
+    </div>
+
+        <div class="carrousel__dots">
+    <a aria-label="oeuvre-1" href="#card-1" class="carrousel__navigate" @click="currentHref = '#card-1'">
+    <span class="carrousel__dot" :class="{dotactif:hrefCourant==='#card-1'}"></span>
+</a>
+
+<a aria-label="oeuvre-2" href="#card-2" class="carrousel__navigate" @click="currentHref = '#card-2'">
+    <span class="carrousel__dot" :class="{dotactif:hrefCourant==='#card-2'}"></span>
+</a>
+
+<a aria-label="oeuvre-3" href="#card-3" class="carrousel__navigate" @click="currentHref = '#card-3'">
+    <span class="carrousel__dot" :class="{dotactif:hrefCourant==='#card-3'}"></span>
+</a>
+
+<a aria-label="oeuvre-4" href="#card-4" class="carrousel__navigate" @click="currentHref = '#card-4'">
+    <span class="carrousel__dot" :class="{dotactif:hrefCourant==='#card-4'}"></span>
+</a>
+
+<a aria-label="oeuvre-5" href="#card-5" class="carrousel__navigate" @click="currentHref = '#card-5'">
+    <span class="carrousel__dot" :class="{dotactif:hrefCourant==='#card-5'}"></span>
+</a>
+
+</div>
+</div>
+</div>
+
     </article>
+</div>
 </div>
 </div>
 </body>

@@ -10,7 +10,114 @@
     <h1>Le Gaudíisme</h1>
     <p>Le Gaudíisme, centré sur l'œuvre du catalan Antoni Gaudí, mêle le modernisme catalan à l'art nouveau. Ce mouvement
     architectural du tournant. du 20e siècle se distingue par son innovation et son originalité.</p>
-<img class="" src="./public/img/casa_batl_mouvement.webp" alt="casa__mouvement" />
+<img class="" src="../public/img/casa_batl_mouvement.webp" alt="casa__mouvement" />
+
+<p>Antoni Gaudí, considéré comme le père du Gaudíisme, a révolutionné l'architecture avec ses conceptions audacieuses et
+novatrices. Influencé par ses racines catalanes, son profond catholicisme et son amour pour la nature, Gaudí a développé
+un style distinctif, marqué par des formes organiques, une utilisation extravagante de la couleur et une intégration
+harmonieuse de l'artisanat dans la construction.
+
+Le Gaudíisme a eu une influence notable sur les mouvements d'architecture moderniste qui ont suivi. Il a introduit des
+concepts de design avant-gardiste qui ont défié les conventions architecturales de son époque, ouvrant la voie à une
+exploration plus libre et expressive de l'espace et de la forme.</p>
+
+<h3>Frise chronologique</h3>
+
+<p>Parcourez le génie de Gaudí à travers le temps en découvrant ses œuvres emblématiques sur notre frise chronologique.</p>
+<img class="" src="../public/img/Frise_chrono.webp" alt="frise__chronologique" />
+
+<h3>Explorez l'univers de Gaudí et ses créations à notre exposition</h3>
+
+<div class="oeuvres">
+    <div class="carousel-container">
+        <div class="carousel">
+
+            <button aria-label="previousSlide" class="carousel__button carousel__button--prv">
+                <img @click="$refs.parent.scrollLeft -= $refs.parent.clientWidth" src="../public/icon/chevron-left.svg"
+                    alt="Slide précédent" class="carousel__button--img">
+            </button>
+
+            <button aria-label="nextSlide" class="carousel__button carousel__button--nxt">
+                <img @click="$refs.parent.scrollLeft += $refs.parent.clientWidth" src="../public/icon/chevron-right.svg"
+                    alt="Slide suivant" class="carousel__button--img">
+            </button>
+
+            <div class="carrousel__track" x-ref="parent" @scroll.debounce.50ms.passive="
+                        hrefCourant = '#'+[...$refs.parent.children].find(e=>e.getBoundingClientRect().x>=0).id">
+
+                <!--cardes-->
+                <div id="card-1" class="carousel__card card">
+                    <img class="card__img" src="../public/img/sagrada-familia1.webp" alt="Sagrada Família">
+                    <div class="card__caption caption">
+                        <p class="caption__text">Sagrada Família</p>
+                        <p class="caption__subtext">1883 - 1926</p>
+                    </div>
+                </div>
+
+                <div id="card-2" class="carousel__card card">
+                    <img class="card__img" src="../public/img/Parc_guell1.webp" alt="Parc Güell">
+                    <div class="card__caption caption">
+                        <p class="caption__text">Parc Güell</p>
+                        <p class="caption__subtext">1900 - 1914</p>
+                    </div>
+                </div>
+
+                <div id="card-3" class="carousel__card card">
+                    <img class="card__img" src="../public/img/casa_batllo1.webp" alt="Casa Batlló">
+                    <div class="card__caption caption">
+                        <p class="caption__text">Casa Batlló</p>
+                        <p class="caption__subtext">1904 - 1906</p>
+                    </div>
+                </div>
+
+                <div id="card-4" class="carousel__card card">
+                    <img class="card__img" src="../public/img/casa_mila1.webp" alt="Casa Milà">
+                    <div class="card__caption caption">
+                        <p class="caption__text">Casa Milà</p>
+                        <p class="caption__subtext">1906 - 1910</p>
+                    </div>
+                </div>
+
+                <div id="card-5" class="carousel__card card">
+                    <img class="card__img" src="../public/img/palau_guell.webp" alt="Palau Güell" width="500"
+                        height="600">
+                    <div class="card__caption caption">
+                        <p class="caption__text">Palau Güell</p>
+                        <p class="caption__subtext">1885 - 1890</p>
+                    </div>
+                </div>
+
+                <div class="carrousel__dots">
+                    <a aria-label="oeuvre-1" href="#card-1" class="carrousel__navigate"
+                        @click="currentHref = '#card-1'">
+                        <span class="carrousel__dot" :class="{dotactif:hrefCourant==='#card-1'}"></span>
+                    </a>
+
+                    <a aria-label="oeuvre-2" href="#card-2" class="carrousel__navigate"
+                        @click="currentHref = '#card-2'">
+                        <span class="carrousel__dot" :class="{dotactif:hrefCourant==='#card-2'}"></span>
+                    </a>
+
+                    <a aria-label="oeuvre-3" href="#card-3" class="carrousel__navigate"
+                        @click="currentHref = '#card-3'">
+                        <span class="carrousel__dot" :class="{dotactif:hrefCourant==='#card-3'}"></span>
+                    </a>
+
+                    <a aria-label="oeuvre-4" href="#card-4" class="carrousel__navigate"
+                        @click="currentHref = '#card-4'">
+                        <span class="carrousel__dot" :class="{dotactif:hrefCourant==='#card-4'}"></span>
+                    </a>
+
+                    <a aria-label="oeuvre-5" href="#card-5" class="carrousel__navigate"
+                        @click="currentHref = '#card-5'">
+                        <span class="carrousel__dot" :class="{dotactif:hrefCourant==='#card-5'}"></span>
+                    </a>
+
+                </div>
+            </div>
+        </div>
+
+
 </body>
 
 </html>

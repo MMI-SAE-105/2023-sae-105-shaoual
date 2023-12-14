@@ -26,5 +26,5 @@
 /* Components import */
 @import "./component/btn.css";
 @import "./component/card.css";
-@import "./component/carroussel.css";
+@import "../component/carrousel.css";
 @import "./component/menu.css";
