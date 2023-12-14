@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="fr" x-data="{menuIsOpen: false}" :class="menuIsOpen && 'noscroll'">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../src/css/style.css">
+    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <title>Page Title</title>
+</head>
+
+<body>
+    <!--LOGO-->
+    <header>
+
+        <div>
+            <button @click="menuIsOpen = !menuIsOpen">
+                <img class="header__menu" src="../public/icon/menu.svg" alt="ouvrir menu">
+            </button>
+            <nav id="mainNav" x-show="menuIsOpen" x-transition.duration.800ms class="menu"></nav>
+
+            <!--FIN LOGO-->
+
+
+
+
+            <!--MENU-->
+            <div class="menu__list">
+                <nav id="mainNav" x-show="menuIsOpen" x-transition.duration.1200ms class="menu">
+                    <ul class="menu__elements">
+                        <li class="menu__element">
+                            <a class="menu__link" href="#">
+                                Accueil
+                            </a>
+                        </li>
+                        <hr class="menu__separator">
+                        <li class="menu__element">
+                            <a class="menu__link" href="./mouvement.html">
+                                Gaudíisme
+                            </a>
+                        </li>
+                        <hr class="menu__separator">
+                        <li class="menu__element">
+                            <a class="menu__link" href="./pageArtiste.html">
+                                Artiste
+                            </a>
+                        </li>
+                        <hr class="menu__separator">
+                        <li class="menu__element">
+                            <a class="menu__link" href="./pageOeuvre.html">
+                                Oeuvres
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+
+    </header>
+    <!--Fin en-tete page-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!--FOOTER-->
+    <footer class="footer">
+        <a class="footer__lien-title" href="../fr/index.html">
+            <h3 class="footer__title">Modernist.</h3>
+        </a>
+    
+        <nav>
+            <ul class="list-unstyled">
+                <li class="footer__list-menu"><a class="footer__list-item" href="./fr/information.html">Information</a></li>
+                <li class="footer__list-menu"><a class="footer__list-item" href="./fr/contact.html">Contact</a></li>
+                <li class="footer__list-menu"><a class="footer__list-item" href="/fr/mouvement.html">Gaudíisme</a>
+                </li>
+                <li class="footer__list-menu"><a class="footer__list-item"
+                        href="https://www.fondationcartier.com/">Fondation Cartier</a></li>
+            </ul>
+        </nav>
+    
+        <div class="footer__2">
+            <h3 class="footer__subheading uppercase">adresse</h3>
+            <p class="footer__adress">Fondation Cartier</p>
+            <address class="footer__adress">261 Bd Raspail<br>75014 Paris</address>
+        </div>
+    
+        <div>
+            <h3 class="footer__subheading uppercase">Nous suivre</h3>
+            <ul class="footer__list list-unstyled">
+                <li><a href="https://www.instagram.com/fondationcartier/?hl=fr"><img class="footer_social-icon"
+                            src="../public/icon/instagram.svg" alt="icone instagram"></a></li>
+                <li><a href="https://twitter.com/Fond_Cartier?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor"><img
+                            class="footer_social-icon" src="../public/icon/twitter.svg" alt="icone twitter"></a>
+                </li>
+                <li><a href="https://www.facebook.com/FondationCartier/?locale=fr_FR"><img class="footer_social-icon"
+                            src="../public/icon/facebook.svg" alt="icone facebook"></a></li>
+            </ul>
+        </div>
+    </footer>
+    <!--FIN FOOTER-->
+    
+    </body>
