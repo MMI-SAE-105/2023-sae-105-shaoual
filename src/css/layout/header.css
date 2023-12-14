@@ -24,7 +24,7 @@
 
 .header__link-logo {
   text-decoration: none;
-  color: var(--white-site);
+  color: rgba(255, 253, 251, 1);
 }
 
 .header__logo-text {
@@ -36,6 +36,7 @@
 
 .header__logo {
   width: 100%;
+  color:rgba(255, 253, 251, 1);;
 }
 
 .header__logo-lang {
