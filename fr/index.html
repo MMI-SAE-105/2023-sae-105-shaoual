@@ -107,91 +107,125 @@
 <!--Carrousel-->
         <h3>Œuvres à découvrir !</h3>
 
-        <div class="oeuvres">
-<div class="carousel-container" >
-    <div class="carousel">
-
-        <button aria-label="previousSlide" class="carousel__button carousel__button--prv">
-            <img  @click="$refs.parent.scrollLeft -= $refs.parent.clientWidth" src="../public/icon/chevron-left.svg" alt="Slide précédent" class="carousel__button--img">
-        </button>
-
-        <button aria-label="nextSlide" class="carousel__button carousel__button--nxt">
-            <img  @click="$refs.parent.scrollLeft += $refs.parent.clientWidth" src="../public/icon/chevron-right.svg" alt="Slide suivant" class="carousel__button--img">
-        </button>
-
-        <div class="carrousel__track" x-ref="parent" @scroll.debounce.50ms.passive="
-                        hrefCourant = '#'+[...$refs.parent.children].find(e=>e.getBoundingClientRect().x>=0).id">
-
-<!--cardes-->
-    <div id="card-1" class="carousel__card card">
-        <img class="card__img" src="../public/img/sagrada-familia1.webp" alt="Sagrada Família" >
-        <div class="card__caption caption">
-            <p class="caption__text">Sagrada Família</p>
-            <p class="caption__subtext">1883 - 1926</p>
-        </div>
-    </div>
+    <div x-data="{hrefCourant:'#ecran-1',}">
+        <div class="carrousel_parent-ecrans" x-ref="parent" @scroll.debounce.250ms.passive="hrefCourant = '#'+
+                [...$refs.parent.children]
+                .find(e=>e.getBoundingClientRect().x>=0)
+                .id">
+            <div id="ecran-1" class="carrousel_ecran">
+                <figure>
+                    <button @click="const p =$refs.parent ;  p.scrollLeft-= p.clientWidth"
+                        class="carrousel_btn carrousel_btn-avant" aria-label="Carte avant"><img
+                            src="../public/icon/chevron-left.svg" alt="flèche gauche"></button>
+                    <button @click="const p =$refs.parent ;  p.scrollLeft+= p.clientWidth"
+                        class="carrousel_btn carrousel_btn-apres" aria-label="Carte siivante"><img
+                            src="../public/icon/chevron-right.svg" alt="flèche droite"></button>
     
-    <div id="card-2" class="carousel__card card">
-        <img class="card__img" src="../public/img/Parc_guell1.webp" alt="Parc Güell"  >
-        <div class="card__caption caption">
-            <p class="caption__text">Parc Güell</p>
-            <p class="caption__subtext">1900 - 1914</p>
-        </div>
-    </div>
     
-    <div id="card-3" class="carousel__card card">
-        <img class="card__img" src="../public/img/casa_batllo1.webp" alt="Casa Batlló" >
-        <div class="card__caption caption">
-            <p class="caption__text">Casa Batlló</p>
-            <p class="caption__subtext">1904 - 1906</p>
-        </div>
-    </div>
     
-    <div id="card-4" class="carousel__card card">
-        <img class="card__img" src="../public/img/casa_mila1.webp" alt="Casa Milà" >
-        <div class="card__caption caption">
-            <p class="caption__text">Casa Milà</p>
-            <p class="caption__subtext">1906 - 1910</p>
-        </div>
-    </div>
     
-    <div id="card-5" class="carousel__card card">
-        <img class="card__img" src="../public/img/palau_guell.webp" alt="Palau Güell"  width="500" height="600">
-        <div class="card__caption caption">
-            <p class="caption__text">Palau Güell</p>
-            <p class="caption__subtext">1885 - 1890</p>
-        </div>
-    </div>
-
-        <div class="carrousel__dots">
-    <a aria-label="oeuvre-1" href="#card-1" class="carrousel__navigate" @click="currentHref = '#card-1'">
-    <span class="carrousel__dot" :class="{dotactif:hrefCourant==='#card-1'}"></span>
-</a>
-
-<a aria-label="oeuvre-2" href="#card-2" class="carrousel__navigate" @click="currentHref = '#card-2'">
-    <span class="carrousel__dot" :class="{dotactif:hrefCourant==='#card-2'}"></span>
-</a>
-
-<a aria-label="oeuvre-3" href="#card-3" class="carrousel__navigate" @click="currentHref = '#card-3'">
-    <span class="carrousel__dot" :class="{dotactif:hrefCourant==='#card-3'}"></span>
-</a>
-
-<a aria-label="oeuvre-4" href="#card-4" class="carrousel__navigate" @click="currentHref = '#card-4'">
-    <span class="carrousel__dot" :class="{dotactif:hrefCourant==='#card-4'}"></span>
-</a>
-
-<a aria-label="oeuvre-5" href="#card-5" class="carrousel__navigate" @click="currentHref = '#card-5'">
-    <span class="carrousel__dot" :class="{dotactif:hrefCourant==='#card-5'}"></span>
-</a>
-
-</div>
-</div>
-</div>
-
-    </article>
-</div>
-</div>
-</div>
+                    <div class="carrousel-card__img">
+                        <img class="carrousel-card__img-retouch" src="../public/img/sagrada-familia1.webp"
+                            alt="sagrada familia">
+                    </div>
+                    <div class="carrousel-card__caption">
+                        <h3 class="carrousel-card__title"><a class="carrousel-card__link" href="">Sagrada Família
+                                <!--ajout le chemin vers l'oeuvre sur href-->
+                                1883 - 1926</a></h3>
+                    </div>
+                </figure>
+            </div>
+    
+            <div id="ecran-2" class="carrousel_ecran">
+                <figure>
+                    <div class="carrousel-card__img">
+                        <img class="carrousel-card__img-retouch" src="../public/img/casa_batllo1.webp"
+                            alt="Casa Batlló 1904 - 1906">
+                    </div>
+                    <div class="carrousel-card__caption">
+                        <h3 class="carrousel-card__title"><a class="carrousel-card__link" href="">Casa Batlló
+                                1904 - 1906</a></h3>
+    
+                    </div>
+                </figure>
+            </div>
+    
+            <div id="ecran-3" class="carrousel_ecran">
+                <figure>
+                    <div class="carrousel-card__img">
+                        <img class="carrousel-card__img-retouch" src="../public/img/Parc_guell1.webp"
+                            alt="Casa Batlló 1904 - 1906">
+                    </div>
+                    <div class="carrousel-card__caption">
+                        <h3 class="carrousel-card__title"><a class="carrousel-card__link" href="">Parc Güell
+                                1900 - 1914</a></h3>
+    
+                    </div>
+                </figure>
+            </div>
+    
+            <div id="ecran-4" class="carrousel_ecran">
+                <figure>
+                    <div class="carrousel-card__img">
+                        <img class="carrousel-card__img-retouch" src="../public/img/casa_mila1.webp" alt="casa mila">
+                    </div>
+                    <div class="carrousel-card__caption">
+                        <h3 class="carrousel-card__title"><a class="carrousel-card__link" href="">Casa Milà
+                                1906 - 1910</a></h3>
+                    </div>
+                </figure>
+            </div>
+    
+            <div id="ecran-5" class="carrousel_ecran">
+                <figure>
+                    <div class="carrousel-card__img">
+                        <img class="carrousel-card__img-retouch" src="../public/img/palau_guell.webp" alt="palau guell">
+                    </div>
+                    <div class="carrousel-card__caption">
+                        <h3 class="carrousel-card__title"><a class="carrousel-card__link" href="">Palau Güell
+                                1885 - 1890</a></h3>
+                    </div>
+                </figure>
+            </div>
+    
+            <div id="ecran-6" class="carrousel_ecran">
+                <figure>
+                    <div class="carrousel-card__img">
+                        <img class="carrousel-card__img-retouch" src="../public/img/casa_vicens.webp" alt="casa vincens">
+                    </div>
+                    <div class="carrousel-card__caption">
+                        <h3 class="carrousel-card__title"><a class="carrousel-card__link" href="">Casa Vicens
+                                1883 - 1888</a></h3>
+                    </div>
+                </figure>
+            </div>
+    
+            <div id="ecran-7" class="carrousel_ecran">
+                <figure>
+                    <div class="carrousel-card__img">
+                        <img class="carrousel-card__img-retouch" src="../public/img/colegio_teresiano.webp"
+                            alt="colegio teresiano">
+                    </div>
+                    <div class="carrousel-card__caption">
+                        <h3 class="carrousel-card__title"><a class="carrousel-card__link" href="">Colegio Teresiano
+                                1888 - 1889</a></h3>
+                    </div>
+                </figure>
+            </div>
+    
+            <div id="ecran-8" class="carrousel_ecran">
+                <figure>
+                    <div class="carrousel-card__img">
+                        <img class="carrousel-card__img-retouch" src="../public/img/casa_calvet.webp" alt="casa calvet">
+                    </div>
+                    <div class="carrousel-card__caption">
+                        <h3 class="carrousel-card__title"><a class="carrousel-card__link" href="">Casa Calvet
+                                1898 - 1900</a></h3>
+                    </div>
+                </figure>
+            </div>
+    
+            <!--FIN CARROUSEL-->
 <!--FOOTER-->
 <footer class="footer">
     <a class="footer__lien-title" href="../fr/index.html">
