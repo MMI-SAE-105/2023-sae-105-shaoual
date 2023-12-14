@@ -1,0 +1,61 @@
+.footer {
+    background-color: var(--black-site);    
+    width: 100%;
+    padding: var(--space3x) var(--space3x);
+    margin-top: 5rem;
+}
+
+.footer__lien-title {
+    text-decoration: none;
+    color: var(--white-site);
+}
+
+.footer__title {
+    color: var(--white-site);
+    font-weight: 700;
+    margin: 1rem auto 2rem auto;
+    font-size: var(--s-i-t-e--t-i-t-l-e);
+    font-family: var(--font-website);
+    text-align: center;
+}
+
+.footer__logo-cartier {
+    margin-top: 2rem;
+    width: 100%
+}
+
+.footer__list-item {
+    text-decoration: none;
+    color: var(--white-site);
+    font-family: var(--font-website);
+    font-size: var(--text);
+    font-weight: 500s;
+}
+
+.footer__subheading {
+    color: var(--white-site);
+    font-family: var(--font-website);
+    font-size: var(--bold-text);
+    margin-top: 2rem;
+}
+
+.footer__adress {
+    color: var(--grey-text);
+    font-family: var(--font-website);
+    font-size: var(--text-legend);
+}
+
+.footer_social-icon {
+    width: 32px;
+}
+
+.footer__list{
+    gap: 2rem;
+    display: flex;
+}
+
+.footer__list-menu {
+    padding-bottom: 0.5rem;
+}
+
+.fo
