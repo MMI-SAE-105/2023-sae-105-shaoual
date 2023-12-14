@@ -1,0 +1,8 @@
+/* Style global pour le carrousel */
+.carousel-container {
+    overflow-x: auto; /* permet le défilement horizontal */
+    display: flex; /* aligne les éléments du carrousel horizontalement */
+    flex-wrap: nowrap; /* empêche les éléments de passer à la ligne */
+    -webkit-overflow-scrolling: touch; /* permet un défilement fluide sur iOS */
+}
+
