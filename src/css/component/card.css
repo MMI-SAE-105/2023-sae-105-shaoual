@@ -7,3 +7,43 @@ section {
     margin: 16px; /* espace entre les cartes */
     background-color: #fff; /* fond blanc */
 }
+
+section:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+section img {
+    width: 100%; /* pour que l'image couvre la largeur de la carte */
+    height: auto; /* pour maintenir le ratio de l'image */
+    border-bottom: 1px solid #eee; /* une ligne de séparation */
+}
+
+section h2 {
+    padding: 2px 16px; /* espace autour du titre */
+    margin: 0; /* supprimez les marges par défaut */
+    color: #333; /* couleur du texte pour le titre */
+    font-size: 24px; /* taille de police pour le titre */
+}
+
+section p {
+    padding: 0 16px; /* espace autour du paragraphe */
+    color: #666; /* couleur du texte pour le paragraphe */
+}
+
+section a {
+    padding: 16px; /* espace autour du lien */
+    display: block; /* faire en sorte que le lien prenne toute la largeur de la carte */
+    background-color: #f1f1f1; /* couleur de fond pour le lien */
+    text-align: center; /* aligner le texte du lien au centre */
+    color: #000; /* couleur du texte du lien */
+    text-decoration: none; /* supprimer le soulignement */
+    font-weight: bold; /* rendre le texte du lien en gras */
+    border-top: 1px solid #eee; /* une ligne de séparation */
+}
+
+/* Ajoutez des media queries pour la réactivité si nécessaire */
+@media (max-width: 768px) {
+    section {
+        width: 100%; /* les cartes prennent toute la largeur sur les petits écrans */
+    }
+}
