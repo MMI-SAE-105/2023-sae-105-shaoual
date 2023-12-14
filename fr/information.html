@@ -14,7 +14,52 @@
     
     <body>
         <header class="header container">
+<!--LOGO-->
+<header>
 
+    <div>
+        <button @click="menuIsOpen = !menuIsOpen">
+            <img class="header__menu" src="../public/icon/menu.svg" alt="ouvrir menu">
+        </button>
+        <nav id="mainNav" x-show="menuIsOpen" x-transition.duration.800ms class="menu"></nav>
+
+        <!--FIN LOGO-->
+
+
+
+        <!--MENU-->
+        <div class="menu__list">
+            <nav id="mainNav" x-show="menuIsOpen" x-transition.duration.1200ms class="menu">
+                <ul class="menu__elements">
+                    <li class="menu__element">
+                        <a class="menu__link" href="#">
+                            Accueil
+                        </a>
+                    </li>
+                    <hr class="menu__separator">
+                    <li class="menu__element">
+                        <a class="menu__link" href="./mouvement.html">
+                            Gaudíisme
+                        </a>
+                    </li>
+                    <hr class="menu__separator">
+                    <li class="menu__element">
+                        <a class="menu__link" href="./pageArtiste.html">
+                            Artiste
+                        </a>
+                    </li>
+                    <hr class="menu__separator">
+                    <li class="menu__element">
+                        <a class="menu__link" href="./pageOeuvre.html">
+                            Oeuvres
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+
+</header>
+<!--Fin en-tete page-->
 
 
         </header>

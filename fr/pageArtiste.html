@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/src/css/style.css">
+    <link rel="stylesheet" href="../src/css/style.css">
     <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
     <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
     <title>Page Title</title>
@@ -58,6 +58,146 @@
 
     </header>
     <!--Fin en-tete page-->
+
+<main class="container">
+    <h5 class="article__title">Antoni Gaudí</h5>
+   <img class="" src="../public/img/Antoni_Gaudi.webp" alt="antoni gaudi " />
+
+    <p class="article__text">Antoni Gaudí i Cornet (né le 25 juin 1852 à Reus ou Riudoms et décédé le 10 juin 1926 à Barcelone) est un architecte
+    espagnol, figure majeure du modernisme catalan. Il est surtout connu pour ses œuvres architecturales à Barcelone, telles
+    que la Sagrada Família, le parc Güell, et la Casa Milà, inscrites au patrimoine mondial de l'UNESCO.</p>
+
+    <p class="article__text">Gaudí s'est distingué par son approche holistique de l'architecture, intégrant des éléments artisanaux et innovant dans
+    le traitement des matériaux. Ses constructions, souvent dépourvues d'angles droits, se caractérisent par des formes
+    ondulantes et asymétriques, inspirées de la nature.</p>
+
+        <h3>Quelques unes de ses oeuvres</h3>
+
+
+<!--carrousel-->
+<div x-data="{hrefCourant:'#ecran-1',}">
+    <div class="carrousel_parent-ecrans" x-ref="parent" @scroll.debounce.250ms.passive="hrefCourant = '#'+
+            [...$refs.parent.children]
+            .find(e=>e.getBoundingClientRect().x>=0)
+            .id">
+        <div id="ecran-1" class="carrousel_ecran">
+            <figure>
+                <button @click="const p =$refs.parent ;  p.scrollLeft-= p.clientWidth"
+                    class="carrousel_btn carrousel_btn-avant" aria-label="Carte avant"><img
+                        src="../public/icon/chevron-left.svg" alt="flèche gauche"></button>
+                <button @click="const p =$refs.parent ;  p.scrollLeft+= p.clientWidth"
+                    class="carrousel_btn carrousel_btn-apres" aria-label="Carte siivante"><img
+                        src="../public/icon/chevron-right.svg" alt="flèche droite"></button>
+
+
+
+
+                <div class="carrousel-card__img">
+                    <img class="carrousel-card__img-retouch" src="../public/img/sagrada-familia1.webp"
+                        alt="sagrada familia">
+                </div>
+                <div class="carrousel-card__caption">
+                    <h3 class="carrousel-card__title"><a class="carrousel-card__link"
+                            href="">Sagrada Família <!--ajout le chemin vers l'oeuvre sur href-->
+                            1883 - 1926</a></h3>
+                </div>
+            </figure>
+        </div>
+
+        <div id="ecran-2" class="carrousel_ecran">
+            <figure>
+                <div class="carrousel-card__img">
+                    <img class="carrousel-card__img-retouch" src="../public/img/casa_batllo1.webp"
+                        alt="Casa Batlló 1904 - 1906">
+                </div>
+                <div class="carrousel-card__caption">
+                    <h3 class="carrousel-card__title"><a class="carrousel-card__link"
+                            href="">Casa Batlló
+                            1904 - 1906</a></h3>
+
+                </div>
+                </figure> </div>
+
+                <div id="ecran-3" class="carrousel_ecran">
+                    <figure>
+                        <div class="carrousel-card__img">
+                            <img class="carrousel-card__img-retouch" src="../public/img/Parc_guell1.webp"
+                                alt="Casa Batlló 1904 - 1906">
+                        </div>
+                        <div class="carrousel-card__caption">
+                            <h3 class="carrousel-card__title"><a class="carrousel-card__link" href="">Parc Güell
+                            1900 - 1914</a></h3>
+                
+                        </div>
+                    </figure>
+                </div>
+
+                <div id="ecran-4" class="carrousel_ecran">
+                    <figure>
+                        <div class="carrousel-card__img">
+                            <img class="carrousel-card__img-retouch" src="../public/img/casa_mila1.webp" alt="casa mila">
+                        </div>
+                        <div class="carrousel-card__caption">
+                            <h3 class="carrousel-card__title"><a class="carrousel-card__link" href="">Casa Milà
+                            1906 - 1910</a></h3>
+                        </div>
+                    </figure>
+                </div>
+
+                <div id="ecran-5" class="carrousel_ecran">
+                    <figure>
+                        <div class="carrousel-card__img">
+                            <img class="carrousel-card__img-retouch" src="../public/img/palau_guell.webp" alt="palau guell">
+                        </div>
+                        <div class="carrousel-card__caption">
+                            <h3 class="carrousel-card__title"><a class="carrousel-card__link" href="">Palau Güell
+                            1885 - 1890</a></h3>
+                        </div>
+                    </figure>
+                </div>
+
+                <div id="ecran-6" class="carrousel_ecran">
+                    <figure>
+                        <div class="carrousel-card__img">
+                            <img class="carrousel-card__img-retouch" src="../public/img/casa" alt="palau guell">
+                        </div>
+                        <div class="carrousel-card__caption">
+                            <h3 class="carrousel-card__title"><a class="carrousel-card__link" href="">Palau Güell
+                                    1885 - 1890</a></h3>
+                        </div>
+                    </figure>
+                </div>
+                
+        <!--FIN CARROUSEL-->
+    </div>
+</div>
+
+</main>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
