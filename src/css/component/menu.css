@@ -1,0 +1,29 @@
+z.menu {
+  visibility: hidden;
+  opacity: 0;
+  overflow: hidden;
+  display: flex;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: var(--black-site);
+  transition: all 0.4s ease-in-out;
+}
+
+/* On se sert de Javascript pour ajouter une classe sur le menu lorsqu'on clique sur le bouton de menu pour le faire apparaître */
+.menu--open {
+  visibility: visible;
+  opacity: 1;
+  background-color: var(--black-site);
+  width: 100%;
+  margin-top: 81px;
+}
+
+.menu__list {
+  margin-top: 5vh;
+  margin-left: 10vw;
+  margin-right: 10vw;
+  color: var(--white--text);
+}
