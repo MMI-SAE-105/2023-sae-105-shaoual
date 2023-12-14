@@ -1,5 +1,5 @@
 .footer {
-    background-color: var(--black-site);    
+    background-color: rgba(14, 14, 14, 1);    
     width: 100%;
     padding: var(--space3x) var(--space3x);
     margin-top: 5rem;
@@ -11,7 +11,7 @@
 }
 
 .footer__title {
-    color: var(--white-site);
+    color: rgba(255, 253, 251, 1);
     font-weight: 700;
     margin: 1rem auto 2rem auto;
     font-size: var(--s-i-t-e--t-i-t-l-e);
@@ -26,21 +26,21 @@
 
 .footer__list-item {
     text-decoration: none;
-    color: var(--white-site);
+    color:rgba(255, 253, 251, 1);
     font-family: var(--font-website);
     font-size: var(--text);
     font-weight: 500s;
 }
 
 .footer__subheading {
-    color: var(--white-site);
+    color: rgba(255, 253, 251, 1);
     font-family: var(--font-website);
     font-size: var(--bold-text);
     margin-top: 2rem;
 }
 
 .footer__adress {
-    color: var(--grey-text);
+    color: rgba(234, 234, 234, 1);
     font-family: var(--font-website);
     font-size: var(--text-legend);
 }
