@@ -6,6 +6,24 @@
 </head>
 
 <body>
+    <header class="header container">
+        <p class="header__logo">
+            <a class="header__logo_text" href="./index.html"> Modernist.
+            </a>
+        </p>
+    
+        <div>
+            <button @click="menuIsOpen = !menuIsOpen">
+                <img class="header__menu" src="../public/icon/menu.svg" alt="ouvrir menu">
+            </button>
+            <nav id="mainNav" x-show="menuIsOpen" x-transition.duration.800ms class="menu"></nav>
+
+
+
+
+            
+            </div>
+            </header>
 
     <h5>Contactez-nous</h5>
     <p>Pour plus d'informations ou des demandes spéciales, veuillez remplir le formulaire de contact ci-dessous.</p>
