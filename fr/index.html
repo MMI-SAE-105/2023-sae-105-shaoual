@@ -11,7 +11,7 @@
 </head>
 
 <body>
-    
+    <!--LOGO-->
     <header class="header container"> 
         <p class="header__logo">
 <a class="header__logo_text" href="./index.html"> Modernist.
@@ -20,9 +20,13 @@
 
 <div>
     <button @click="menuIsOpen = !menuIsOpen">
-        <img class="header_menu" src="../public/icon/menu.svg" alt="ouvrir menu">
+        <img class="header__menu" src="../public/icon/menu.svg" alt="ouvrir menu">
     </button>
     <nav id="mainNav" x-show="menuIsOpen" x-transition.duration.800ms class="menu"></nav>
+
+<!--FIN LOGO-->
+
+
 
 <!--MENU-->
 <div class="menu__list">
@@ -58,8 +62,12 @@
 </header>
 <!--Fin en-tete page-->
 
+
+
+
+
 <main class="container">
-<p>Notre nouvelle exposition temporaire du 13 avril au 23 juin 2024 sera sur le Gaudíisme</p>
+<p class="articles__header-texte">Notre nouvelle exposition temporaire du 13 avril au 23 juin 2024 sera sur le Gaudíisme</p>
 </main>
 
 
@@ -72,7 +80,7 @@
 
 
 <!--LES CARDS-->
-  <!--  <section>
+  <section>
         <img src="./public/img/casa_balto_1.webp" alt="Casa Balto" />
         <h2>Le Gaudíisme</h2>
         <p>Le Gaudíisme incarne la singularité de la vision architecturale d'Antoni Gaudí.</p>
@@ -94,6 +102,12 @@
     </section>
     
     <article>
+
+
+<!--FIN CARDS-->
+
+
+
         <h3>Œuvres à découvrir !</h3>
     
         <figure>
@@ -137,8 +151,8 @@
                
             </figcaption>
         </figure>
-    </article>-->
-    <!--FIN CARDS--> 
+    </article>
+ 
 </body>
 
 </html>
