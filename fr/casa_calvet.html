@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="fr" x-data="{menuIsOpen: false}" :class="menuIsOpen && 'noscroll'">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../src/css/style.css">
+    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <title>Page Title</title>
+</head>
+
+<body>
+    <header class="header container">
+        <p class="header__logo">
+            <a class="header__logo_text" href="./index.html"> Modernist.
+            </a>
+        </p>
+
+        <div>
+
+            <button class="header__menu-btn menu-btn" aria-label="menu" aria-expanded="false" aria-controls="mainNav"
+                @click="menuIsOpen = !menuIsOpen" :class="menuIsOpen && 'menu-btn--open'" ->
+                <span class="menu-btn__bar"></span>
+                <nav id="mainNav" x-show="menuIsOpen" x-transition.duration.800ms class="menu"></nav>
+                <!--FIN LOGO-->
+
+
+                <!--MENU-->
+
+                <nav id="mainNav" x-show="menuIsOpen" x-transition.duration.1200ms class="menu">
+                    <ul class="menu__elements">
+                        <li class="menu__element">
+                            <a class="menu__link" href="../fr/index.html">
+                                Accueil
+                            </a>
+                        </li>
+                        <hr class="menu__separator">
+                        <li class="menu__element">
+                            <a class="menu__link" href="../fr/mouvement.html">
+                                Gaudíisme
+                            </a>
+                        </li>
+                        <hr class="menu__separator">
+                        <li class="menu__element">
+                            <a class="menu__link" href="../fr/pageArtiste.html">
+                                Artiste
+                            </a>
+                        </li>
+                        <hr class="menu__separator">
+                        <li class="menu__element">
+                            <a class="menu__link" href="../fr/sagrada.html">
+                                Oeuvre
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+
+
+    </header>
+    <!--Fin en-tete page-->
+
+    <main class="container">
+
+        <h5 class="article__title">Casa Calvet - Antoni GaudÍ</h5>
+
+
+        <figure>
+            <img class="article__image-oeuvre" src="../public/img/casa_calvet.webp" alt="colegio teresiano" />
+            <figcaption class="article__img-caption"> Casa Calvet- Antoni GaudÍ</figcaption>
+        </figure>
+
+        <p class="article__text"> </p>
+
+        <ul class="article__information-oeuvre">
+            <li><strong>Auteur</strong> : <a class="article__information-oeuvre--link"
+                    href="https://fr.wikipedia.org/wiki/Antoni_Gaud%C3%AD">Antoní Gaudí</a></li>
+            <li><strong>Titre original</strong>: Casa Calvet</li>
+            <li><strong>Date</strong>: 1883 - 1888</li>
+            <li><strong>Style</strong>: Gaudíisme, combinant des éléments du Modernisme Catalan et de l'Art Nouveau</li>
+            <li><strong>Genre</strong>: Architecture résidentielle</li>
+            <li><strong>Media</strong>: Brique, fer forgé, céramique</li>
+            <li><strong>Dimensions</strong>: Dimensions non spécifiées, comprenant plusieurs étages et un jardin.</li>
+        </ul>
+
+        <p class="article__text"> La Casa Batlló est reconnue pour sa façade ondulante semblable à des vagues, ses
+            balcons en forme de masques et son toit
+            qui évoque le dos d'un dragon. À l'intérieur, l'escalier principal rappelle la colonne vertébrale d'une
+            créature
+            fantastique, et la lumière naturelle joue à travers les vitraux et le puits de lumière central. Gaudí a
+            conçu la Casa
+            Batlló pour être une allégorie de la légende de Saint Georges et le dragon, transformant un bâtiment
+            résidentiel en une
+            légende sculpturale.
+        </p>
+
+        <figure>
+            <img class="article__image-oeuvre" src="../public/img/Casa-Calvet_Getty.webp"
+                alt="batllo_detail" />
+        </figure>
+
+        <!--FOOTER-->
+        <footer class="footer">
+            <a class="footer__lien-title" href="../fr/index.html">
+                <h3 class="footer__title">Modernist.</h3>
+            </a>
+            <div class="element__right">
+
+                <nav>
+                    <ul class="list-unstyled">
+                        <li class="footer__list-menu"><a class="footer__list-item"
+                                href="../fr/information.html">Information</a>
+                        </li>
+                        <li class="footer__list-menu"><a class="footer__list-item" href="../fr/contact.html">Contact</a>
+                        </li>
+                        <li class="footer__list-menu"><a class="footer__list-item"
+                                href="../fr/mouvement.html">Gaudíisme</a>
+                        </li>
+
+                    </ul>
+                </nav>
+
+                <div class="footer__2">
+                    <h3 class="footer__subheading uppercase">adresse</h3>
+                    <p class="footer__adress">Fondation Cartier</p>
+                    <address class="footer__adress">261 Bd Raspail<br>75014 Paris</address>
+                </div>
+            </div>
+            <div class="reseaux__sociaux">
+                <h3 class="footer__subheading uppercase">Nous suivre</h3>
+                <ul class="footer__list list-unstyled">
+                    <li><a href="https://www.instagram.com/fondationcartier/?hl=fr"><img class="footer_social-icon"
+                                src="../public/icon/instagram.svg" alt="icone instagram"></a></li>
+                    <li><a
+                            href="https://twitter.com/Fond_Cartier?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor"><img
+                                class="footer_social-icon" src="../public/icon/twitter.svg" alt="icone twitter"></a>
+                    </li>
+                    <li><a href="https://www.facebook.com/FondationCartier/?locale=fr_FR"><img
+                                class="footer_social-icon" src="../public/icon/facebook.svg" alt="icone facebook"></a>
+                    </li>
+                </ul>
+            </div>
+        </footer>
+        <!--FIN FOOTER-->
+
+</body>
