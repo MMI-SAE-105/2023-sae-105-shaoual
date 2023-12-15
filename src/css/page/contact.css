@@ -39,8 +39,9 @@
 
 
 .article__text {
-    font-family: 'Poppins', sans-serif;
-    size-font: 40px;;
+    font-family: var(--font-website:);
+    size-font: var(--heading-page);
+
 
 }
 
