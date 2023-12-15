@@ -58,8 +58,11 @@
 .frise__chronologique {
      display: flex;
     justify-content: center; 
-    align-items: center;     
-
-
+    align-items: center;  
+      
 }
 
+
+.image__mouvement {
+padding:20px;
+}
