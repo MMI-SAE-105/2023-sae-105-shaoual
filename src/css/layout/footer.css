@@ -1,80 +1,73 @@
 .footer {
-    background-color: rgba(14, 14, 14, 1);    
-    width: 100%;
-    padding: var(--space3x) var(--space3x);
-    margin-top: 5rem;
+  background-color: rgba(14, 14, 14, 1);
+  width: 100%;
+  padding: var(--space3x) var(--space3x);
+  margin-top: 5rem;
 }
 
 .footer__lien-title {
-    text-decoration: none;
-    color: var(--white-site);
+  text-decoration: none;
+  color: var(--white-site);
 }
 
 .footer__title {
-    color: rgba(255, 253, 251, 1);
-    font-weight: 100;
-    margin: 1rem auto 2rem auto;
-    font-size: var(--s-i-t-e--t-i-t-l-e);
-    font-family: var(--font-website);
-    text-align: center;
+  color: rgba(255, 253, 251, 1);
+  font-weight: 100;
+  margin: 1rem auto 2rem auto;
+  font-size: var(--s-i-t-e--t-i-t-l-e);
+  font-family: var(--font-website);
+  text-align: center;
 }
 
 .footer__list-item {
-    text-decoration: none;
-    color:rgba(255, 253, 251, 1);
-    font-family: var(--font-website);
-    font-size: var(--text);
-    font-weight: 500s;
+  text-decoration: none;
+  color: rgba(255, 253, 251, 1);
+  font-family: var(--font-website);
+  font-size: var(--text);
+  font-weight: 500s;
 }
 
 .footer__subheading {
-    color: rgba(255, 253, 251, 1);
-    font-family: var(--font-website);
-    font-size: var(--bold-text);
-    margin-top: 2rem;
+  color: rgba(255, 253, 251, 1);
+  font-family: var(--font-website);
+  font-size: var(--bold-text);
+  margin-top: 2rem;
 }
 
 .footer__adress {
-    color: rgba(234, 234, 234, 1);
-    font-family: var(--font-website);
-    font-size: var(--text-legend);
+  color: rgba(234, 234, 234, 1);
+  font-family: var(--font-website);
+  font-size: var(--text-legend);
 }
 
 .footer_social-icon {
-    width: 32px;
-    text-align: center;
+  width: 32px;
+  text-align: center;
 }
 
-.footer__list{
-    gap: 2rem;
-    display: flex;
+.footer__list {
+  gap: 2rem;
+  display: flex;
 }
 
 .footer__list-menu {
-    padding-bottom: 0.5rem;
-}
-
-.footer__2 {
-  position: relative; /* Ajout de la position absolue pour un placement spécifique */
-   text-align: right;
-   top:-137px;
-    right: 40px;
+  padding-bottom: 0.5rem;
 }
 
 .reseaux__sociaux {
- position: relative; /* Ajout de la position absolue pour un placement spécifique */
-   text-align: center;
-   top:-137px;
-    right: 40px;
-
+  position: relative; /* Ajout de la position absolue pour un placement spécifique */
+  text-align: left;
 }
 
 .footer__title {
-font-family: rgba(255, 253, 251, 1);
+  font-family: rgba(255, 253, 251, 1);
   font-size: var(--s-i-t-e--t-i-t-l-e);
   font-weight: 900;
   text-align: center;
 }
 
-
-
+.element__right {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 0;
+}
