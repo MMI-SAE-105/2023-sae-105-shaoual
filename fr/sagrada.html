@@ -20,46 +20,48 @@
     </p>
 
     <div>
+
         <button class="header__menu-btn menu-btn" aria-label="menu" aria-expanded="false" aria-controls="mainNav"
             @click="menuIsOpen = !menuIsOpen" :class="menuIsOpen && 'menu-btn--open'" ->
+
             <span class="menu-btn__bar"></span>
             <nav id="mainNav" x-show="menuIsOpen" x-transition.duration.800ms class="menu"></nav>
+
             <!--FIN LOGO-->
 
 
-
             <!--MENU-->
-            <div class="menu__list">
-                <nav id="mainNav" x-show="menuIsOpen" x-transition.duration.1200ms class="menu">
-                    <ul class="menu__elements">
-                        <li class="menu__element">
-                            <a class="menu__link" href="#">
-                                Accueil
-                            </a>
-                        </li>
-                        <hr class="menu__separator">
-                        <li class="menu__element">
-                            <a class="menu__link" href="./mouvement.html">
-                                Gaudíisme
-                            </a>
-                        </li>
-                        <hr class="menu__separator">
-                        <li class="menu__element">
-                            <a class="menu__link" href="./pageArtiste.html">
-                                Artiste
-                            </a>
-                        </li>
-                        <hr class="menu__separator">
-                        <li class="menu__element">
-                            <a class="menu__link" href="./pageOeuvre.html">
-                                Oeuvres
-                            </a>
-                        </li>
-                    </ul>
-                </nav>
-            </div>
 
-    </header>
+            <nav id="mainNav" x-show="menuIsOpen" x-transition.duration.1200ms class="menu">
+                <ul class="menu__elements">
+                    <li class="menu__element">
+                        <a class="menu__link" href="../fr/index.html">
+                            Accueil
+                        </a>
+                    </li>
+                    <hr class="menu__separator">
+                    <li class="menu__element">
+                        <a class="menu__link" href="../fr/mouvement.html">
+                            Gaudíisme
+                        </a>
+                    </li>
+                    <hr class="menu__separator">
+                    <li class="menu__element">
+                        <a class="menu__link" href="../fr/pageArtiste.html">
+                            Artiste
+                        </a>
+                    </li>
+                    <hr class="menu__separator">
+                    <li class="menu__element">
+                        <a class="menu__link" href="../fr/sagrada.html">
+                            Oeuvre
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+
+
+</header>
     <!--Fin en-tete page-->
 
 <main class="container">

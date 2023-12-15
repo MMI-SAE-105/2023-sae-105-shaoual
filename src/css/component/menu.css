@@ -18,6 +18,8 @@
   background: rgba(14, 14, 14, 1);
   position: absolute;
   inset: 0;
+  padding:200px 15px;
+   
 }
 /* Pour aligner les éléments verticalement */
 /* .menu__list 
@@ -43,13 +45,22 @@
   display: flex;
   justify-content: center;
   align_items: center;
-  background-color: ;
-  /*font-size: 28px;*/
-  font-weight: 900;
-
-   
+  background-color: rgba(255, 253, 251, 1);
+  font-weight: 900; 
+}
+.menu__link {
+    font-family: 'Poppins', sans-serif;
+    font-size: 24px;
+    padding:120px;
+ text-align: right;
+ color: rgba(255, 253, 251, 1) ;
 }
 
+
+
+
+
+ /*font-size: 28px;*/
 .menu-btn__bar,
 .menu-btn__bar::before,
 .menu-btn__bar::after {
@@ -63,6 +74,11 @@
   transition: all 0.4s ease-in-out;
 }
 
+.menu-btn__bar {
+width: 30%; 
+  height: 5px;
+
+}
 .menu-btn__bar::before {
   top: -10px; /* Positionnement de la barre supérieure */
 }
