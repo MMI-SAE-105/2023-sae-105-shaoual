@@ -31,4 +31,6 @@
 
 /* pages */
 
-@import "./page/contact.css"
+@import "./page/contact.css";
+
+@import "./fonts/fonts.css";

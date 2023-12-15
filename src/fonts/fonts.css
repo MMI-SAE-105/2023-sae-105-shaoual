@@ -2,12 +2,14 @@ body {
     font-family: 'Poppins', sans-serif;
 }
 
-h5 {
-    font-size: 32px; 
-    font-weight: 700; /* Poids de la police pour le titre */
+
+
+.article__text {
+    font-size: 18px; /* Taille de police pour le paragraphe */
+    font-weight: 16px; /* Poids normal de la police pour le paragraphe */
 }
 
-p {
-    font-size: 18px; /* Taille de police pour le paragraphe */
-    font-weight: 400; /* Poids normal de la police pour le paragraphe */
+.article__title {
+     font-size: 55px; /* Taille de police pour le paragraphe */
+    font-weight: 16px;
 }
