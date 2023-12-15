@@ -1,0 +1,31 @@
+:root{
+
+/* Color styles */
+--white-site: rgba(255, 253, 251, 1);
+--black-site: rgba(14, 14, 14, 1);
+--grey-text: rgba(234, 234, 234, 1);
+--gris-legende: rgba(88, 88, 88, 1);
+
+/* Text-size styles */
+--s-i-t-e--t-i-t-l-e: 28px;
+--heading-page: 24px;
+--bouton: 12px;
+--heading-3: 14px;
+--heading-2: 16px;
+--entete--text: 16px;
+--text: 14px;
+--bold-text: 14px;
+--text-legend: 12px;
+
+/* Polices de caractère */
+--font-website: 'Poppins', sans-serif;
+
+/* Espaces */
+  --space1x: 8px;
+  --space2x: 16px;
+  --space3x: 24px;
+  --space4x: 48px;
+  --space5x: 80px;
+  --space6x: 150px;
+
+}

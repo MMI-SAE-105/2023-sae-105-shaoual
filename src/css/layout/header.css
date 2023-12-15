@@ -27,16 +27,16 @@
   color: rgba(255, 253, 251, 1);
 }
 
-.header__logo-text {
-  font-family: var(--font-website);
+.header__logo_text {
+  font-family:  rgba(255, 253, 251, 1);
   font-size: var(--s-i-t-e--t-i-t-l-e);
-  font-weight: 700;
+  font-weight: 900;
   text-align: center;
 }
 
 .header__logo {
   width: 100%;
-  color:rgba(255, 253, 251, 1);;
+  color: rgba(255, 253, 251, 1);
 }
 
 .header__logo-lang {
@@ -46,4 +46,6 @@
   position: relative;
 }
 
-
+.header__menu {
+    background:transparent;
+}
