@@ -36,17 +36,17 @@
   width: 100%;
   height: 30vh;
   display: flex;
-  justify-content: center;
-  align_items: center;
+  justify-content: left;
+  align_items: left;
   background-color: rgba(255, 253, 251, 1);
   font-weight: 900; 
 }
 .menu__link {
     font-family: 'Poppins', sans-serif;
     font-size: 24px;
-    padding:120px;
+    padding:2px;
  text-align: ;
- color: ;
+ color-font: rgba(255, 253, 251, 1) ;
 }
 
 
@@ -99,4 +99,10 @@
 .menu-btn:not(.menu-btn--open) .menu-btn__bar::before,
 .menu-btn:not(.menu-btn--open) .menu-btn__bar::after {
   background-color: rgba(255, 253, 251, 1);
+}
+
+.button.header__menu-btn.menu-btn {
+background-color: transparent;
+color:transparent;
+
 }
