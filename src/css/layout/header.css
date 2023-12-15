@@ -37,13 +37,6 @@
   color: rgba(255, 253, 251, 1);
 }
 
-.header__logo-lang {
-  margin-top: 25px;
-  width: 48px;
-  height: 32px;
-  position: relative;
-}
-
 .header__menu {
   background: transparent;
 }

@@ -68,3 +68,13 @@
     right: 40px;
 
 }
+
+.footer__title {
+font-family: rgba(255, 253, 251, 1);
+  font-size: var(--s-i-t-e--t-i-t-l-e);
+  font-weight: 900;
+  text-align: center;
+}
+
+
+
