@@ -14,7 +14,7 @@
     width: 80%;
     margin-bottom: 1.5rem;
     border-radius: 3px;
-    border: 2px solid var(--black-site);
+    border: 2px solid rgba(14, 14, 14, 1);
     padding-top: 5px;
     padding-bottom: 5px;
 
@@ -37,6 +37,7 @@
 }
 
 
+
 .article__text {
     font-family: 'Poppins', sans-serif;
     size-font: 40px;;
@@ -47,9 +48,9 @@
   font-family: 'Poppins', sans-serif; /* Utilisation de la police Poppins */
   font-size: 24px; /* Taille de police */
   font-weight: bold; /* Gras pour mettre en évidence le titre */
-  color: #333; /* Couleur du texte, peut être ajustée selon vos besoins */
+  color:  rgba(14, 14, 14, 1); /* Couleur du texte, peut être ajustée selon vos besoins */
   margin: 10px; /* Espacement autour du titre */
-  text-align: center; 
+  text-align: left; 
 
 }
 
