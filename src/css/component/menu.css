@@ -19,23 +19,23 @@
   position: absolute;
   inset: 0;
 }
-
-.menu__list {
+/* Pour aligner les éléments verticalement */
+/* .menu__list 
   display: flex;
-  flex-direction: column; /* Pour aligner les éléments verticalement */
+  flex-direction: column; 
   justify-content: center;
   align-items: right;
   list-style: none;
   padding: 100px;
   margin: 100;
   color: rgba(255, 253, 251, 1);
-}
+*/
 
 .menu__list {
   top: 0;
   left: 0;
   position: absolute;
-  padding: 10px 15px;
+  padding:15px;
   cursor: pointer;
   transition: ;
   width: 100%;
@@ -44,34 +44,34 @@
   justify-content: center;
   align_items: center;
   background-color: ;
-  font-size: 28px;
+  /*font-size: 28px;*/
   font-weight: 900;
+
+   
 }
 
 .menu-btn__bar,
 .menu-btn__bar::before,
 .menu-btn__bar::after {
-  content: "";
-  background: var(--black-site);
+  content: '';
+  background: rgba(255, 253, 251, 1);
   height: 5px;
-  width: 100%;
+  width: 30%; /* Taille des barres */
   position: absolute;
-  left: 0;
+  right: 0; /* Alignement à droite */
   z-index: 12;
   transition: all 0.4s ease-in-out;
 }
 
 .menu-btn__bar::before {
-  top: -10px;
-  z-index: 12;
+  top: -10px; /* Positionnement de la barre supérieure */
 }
 
 .menu-btn__bar::after {
-  top: 10px;
-  z-index: 12;
+  top: 10px; /* Positionnement de la barre inférieure */
 }
 
-/* Technique pour transformer les 3 barres du bouton de menu en croix*/
+/* Technique pour transformer les 3 barres du bouton de menu en croix */
 .menu-btn--open .menu-btn__bar,
 .menu-btn--open .menu-btn__bar::before,
 .menu-btn--open .menu-btn__bar::after {
@@ -80,29 +80,12 @@
 
 .menu-btn--open .menu-btn__bar::before,
 .menu-btn--open .menu-btn__bar::after {
-  transform: rotate(90deg);
-  top: 0;
+  top: 0; /* Alignement des barres en mode ouvert */
+  transform: rotate(45deg);
 }
 
 .menu-btn:not(.menu-btn--open) .menu-btn__bar,
 .menu-btn:not(.menu-btn--open) .menu-btn__bar::before,
 .menu-btn:not(.menu-btn--open) .menu-btn__bar::after {
-  background-color: var(--black-site);
-}
-
-.menu__element{
-  color: var(--white-site);
-  font-family: var(--font-website);
-  font-size: var(--heading-2);
-  font-weight: 500;
-  padding-top: 2rem;
-}
-
-.menu__link {
-  color: rgba(255, 253, 251, 1);
-  font-family: var(--font-website);
-  font-size: var(--heading-2);
-  font-weight: 500;
-  padding-top: 2rem;
-
+  background-color: rgba(255, 253, 251, 1);
 }

@@ -19,9 +19,10 @@
         </p>
     
         <div>
-            <button @click="menuIsOpen = !menuIsOpen">
-                <img class="header__menu" src="../public/icon/menu.svg" alt="ouvrir menu">
-            </button>
+            <button class="header__menu-btn menu-btn" aria-label="menu" aria-expanded="false" aria-controls="mainNav"
+                @click="menuIsOpen = !menuIsOpen" :class="menuIsOpen && 'menu-btn--open'" ->
+                <span class="menu-btn__bar"></span>
+                <nav id="mainNav" x-show="menuIsOpen" x-transition.duration.800ms class="menu"></nav>
     
             <!--FIN LOGO-->
     
