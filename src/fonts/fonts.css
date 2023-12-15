@@ -1,15 +1,17 @@
-body {
+.body {
     font-family: 'Poppins', sans-serif;
+    display: flex;
 }
 
 
 
 .article__text {
-    font-size: 18px; /* Taille de police pour le paragraphe */
-    font-weight: 16px; /* Poids normal de la police pour le paragraphe */
+    font-family: 'Poppins', sans-serif;
+    size-font: 40px;;
+
 }
 
 .article__title {
-     font-size: 55px; /* Taille de police pour le paragraphe */
-    font-weight: 16px;
+  
+
 }

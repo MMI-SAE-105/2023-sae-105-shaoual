@@ -1,4 +1,4 @@
-img {
+.img {
     max-width: 100%;
     height: auto;
 }
@@ -8,6 +8,7 @@ img {
      max-width: 100%;
     height: auto;
      border-radius: 8px;
+
 }
 
 .rotated {
