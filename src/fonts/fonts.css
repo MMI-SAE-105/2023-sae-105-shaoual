@@ -1,0 +1,13 @@
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+h5 {
+    font-size: 32px; 
+    font-weight: 700; /* Poids de la police pour le titre */
+}
+
+p {
+    font-size: 18px; /* Taille de police pour le paragraphe */
+    font-weight: 400; /* Poids normal de la police pour le paragraphe */
+}

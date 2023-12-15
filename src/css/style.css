@@ -28,3 +28,7 @@
 @import "./component/card.css";
 @import "./component/carrousel.css";
 @import "./component/menu.css";
+
+/* pages */
+
+@import "./page/contact.css"
