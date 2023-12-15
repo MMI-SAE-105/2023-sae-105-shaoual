@@ -22,15 +22,8 @@
    
 }
 /* Pour aligner les éléments verticalement */
-/* .menu__list 
-  display: flex;
-  flex-direction: column; 
-  justify-content: center;
-  align-items: right;
-  list-style: none;
-  padding: 100px;
-  margin: 100;
-  color: rgba(255, 253, 251, 1);
+
+
 */
 
 .menu__list {
@@ -52,10 +45,9 @@
     font-family: 'Poppins', sans-serif;
     font-size: 24px;
     padding:120px;
- text-align: right;
- color: rgba(255, 253, 251, 1) ;
+ text-align: ;
+ color: ;
 }
-
 
 
 
@@ -67,24 +59,27 @@
   content: '';
   background: rgba(255, 253, 251, 1);
   height: 5px;
-  width: 30%; /* Taille des barres */
+  width: 10%; /* Taille des barres */
   position: absolute;
   right: 0; /* Alignement à droite */
   z-index: 12;
   transition: all 0.4s ease-in-out;
-}
-
-.menu-btn__bar {
-width: 30%; 
-  height: 5px;
 
 }
+
+
 .menu-btn__bar::before {
   top: -10px; /* Positionnement de la barre supérieure */
+    width: 100%; /* Taille des barres */
+
+
 }
 
 .menu-btn__bar::after {
   top: 10px; /* Positionnement de la barre inférieure */
+    width: 100%; /* Taille des barres */
+
+
 }
 
 /* Technique pour transformer les 3 barres du bouton de menu en croix */
