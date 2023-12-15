@@ -56,10 +56,10 @@
 }
 
 .frise__chronologique {
-     display: flex;
-    justify-content: center; 
-    align-items: center;  
-      
+     display: block; /* Fait de l'image un élément de bloc */
+    margin: 0 auto; /* Marge automatique pour centrer horizontalement */
+    max-width: 100%; /* Assure que l'image ne dépasse pas la largeur du conteneur */
+    height: auto;
 }
 
 
