@@ -13,8 +13,6 @@
     </head>
     
     <body>
-        <header class="header container">
-<!--LOGO-->
 <header class="header container">
     <p class="header__logo">
         <a class="header__logo_text" href="./index.html"> Modernist.
@@ -22,45 +20,54 @@
     </p>
 
     <div>
-        <button @click="menuIsOpen = !menuIsOpen">
+
+        <button class="header__menu-btn menu-btn" @click="menuIsOpen = !menuIsOpen"
+            :class="menuIsOpen && 'menu-btn--open'" ->
             <img class="header__menu" src="../public/icon/menu.svg" alt="ouvrir menu">
         </button>
+        <span class="menu-btn__bar"></span>
+        <nav id="mainNav" x-show="menuIsOpen" x-transition.duration.800ms class="menu"></nav>
 
         <!--FIN LOGO-->
 
 
-
         <!--MENU-->
+
         <nav id="mainNav" x-show="menuIsOpen" x-transition.duration.1200ms class="menu">
-            <ul class="menu__list">
+            <ul class="menu__elements">
                 <li class="menu__element">
-                    <a class="menu__link" href="#">
+                    <a class="menu__link" href="../fr/index.html">
                         Accueil
                     </a>
                 </li>
+                <hr class="menu__separator">
                 <li class="menu__element">
-                    <a class="menu__link" href="./mouvement.html">
+                    <a class="menu__link" href="../fr/mouvement.html">
                         Gaudíisme
                     </a>
                 </li>
+                <hr class="menu__separator">
                 <li class="menu__element">
-                    <a class="menu__link" href="./pageArtiste.html">
+                    <a class="menu__link" href="../fr/pageArtiste.html">
                         Artiste
                     </a>
                 </li>
+                <hr class="menu__separator">
                 <li class="menu__element">
-                    <a class="menu__link" href="./information.html">
-                        information
+                    <a class="menu__link" href="../fr/sagrada.html">
+                        Oeuvre
                     </a>
                 </li>
             </ul>
         </nav>
-    </div>
+
+
 </header>
 <!--Fin en-tete page-->
 
 
-        </header>
+
+       
 <main class="container">
 <h5 class="article__title">Informations</h5>
 

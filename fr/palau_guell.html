@@ -20,47 +20,50 @@
     </p>
 
     <div>
-        <button @click="menuIsOpen = !menuIsOpen">
+
+        <button class="header__menu-btn menu-btn" @click="menuIsOpen = !menuIsOpen"
+            :class="menuIsOpen && 'menu-btn--open'" ->
             <img class="header__menu" src="../public/icon/menu.svg" alt="ouvrir menu">
         </button>
+        <span class="menu-btn__bar"></span>
         <nav id="mainNav" x-show="menuIsOpen" x-transition.duration.800ms class="menu"></nav>
-            <!--FIN LOGO-->
+
+        <!--FIN LOGO-->
 
 
+        <!--MENU-->
+
+        <nav id="mainNav" x-show="menuIsOpen" x-transition.duration.1200ms class="menu">
+            <ul class="menu__elements">
+                <li class="menu__element">
+                    <a class="menu__link" href="../fr/index.html">
+                        Accueil
+                    </a>
+                </li>
+                <hr class="menu__separator">
+                <li class="menu__element">
+                    <a class="menu__link" href="../fr/mouvement.html">
+                        Gaudíisme
+                    </a>
+                </li>
+                <hr class="menu__separator">
+                <li class="menu__element">
+                    <a class="menu__link" href="../fr/pageArtiste.html">
+                        Artiste
+                    </a>
+                </li>
+                <hr class="menu__separator">
+                <li class="menu__element">
+                    <a class="menu__link" href="../fr/sagrada.html">
+                        Oeuvre
+                    </a>
+                </li>
+            </ul>
+        </nav>
 
 
-            <!--MENU-->
-            <div class="menu__list">
-                <nav id="mainNav" x-show="menuIsOpen" x-transition.duration.1200ms class="menu">
-                    <ul class="menu__elements">
-                        <li class="menu__element">
-                            <a class="menu__link" href="#">
-                                Accueil
-                            </a>
-                        </li>
-                        <hr class="menu__separator">
-                        <li class="menu__element">
-                            <a class="menu__link" href="./mouvement.html">
-                                Gaudíisme
-                            </a>
-                        </li>
-                        <hr class="menu__separator">
-                        <li class="menu__element">
-                            <a class="menu__link" href="./pageArtiste.html">
-                                Artiste
-                            </a>
-                        </li>
-                        <hr class="menu__separator">
-                        <li class="menu__element">
-                            <a class="menu__link" href="./pageOeuvre.html">
-                                Oeuvres
-                            </a>
-                        </li>
-                    </ul>
-                </nav>
-            </div>
+</header>
 
-    </header>
     <!--Fin en-tete page-->
 
 
