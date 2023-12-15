@@ -7,7 +7,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/src/css/style.css">
     <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
-    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
     <title>Page Title</title>
 </head>
 
@@ -22,13 +21,15 @@
     </p>
 
     <div>
-        <button @click="menuIsOpen = !menuIsOpen">
+      
+        <button class="header__menu-btn menu-btn" @click="menuIsOpen = !menuIsOpen" 
+                :class="menuIsOpen && 'menu-btn--open'"->
             <img class="header__menu" src="../public/icon/menu.svg" alt="ouvrir menu">
         </button>
+        <span class="menu-btn__bar"></span>
         <nav id="mainNav" x-show="menuIsOpen" x-transition.duration.800ms class="menu"></nav>
 
 <!--FIN LOGO-->
-
 
 
 <!--MENU-->
@@ -42,20 +43,20 @@
             </li>
             <hr class="menu__separator">
             <li class="menu__element">
-                <a class="menu__link" href="../mouvement.html">
+                <a class="menu__link" href="../fr/mouvement.html">
                     Gaudíisme
                 </a>
             </li>
             <hr class="menu__separator">
             <li class="menu__element">
-                <a class="menu__link" href="../pageArtiste.html">
+                <a class="menu__link" href="../fr/pageArtiste.html">
                     Artiste
                 </a>
             </li>
             <hr class="menu__separator">
             <li class="menu__element">
-                <a class="menu__link" href="../information.html">
-                    Information
+                <a class="menu__link" href="../fr/sagrada.html">
+                   Oeuvre
                 </a>
             </li>
         </ul>

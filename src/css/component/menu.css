@@ -21,7 +21,7 @@
 }
 
 .menu__list {
- display: flex;
+  display: flex;
   flex-direction: column; /* Pour aligner les éléments verticalement */
   justify-content: center;
   align-items: right;
@@ -29,24 +29,80 @@
   padding: 100px;
   margin: 100;
   color: rgba(255, 253, 251, 1);
-
 }
 
-
-.menu__list { 
-top: 0;
-left: 0;
-position: absolute;
-padding: 10px 15px;
+.menu__list {
+  top: 0;
+  left: 0;
+  position: absolute;
+  padding: 10px 15px;
   cursor: pointer;
   transition: ;
-  width: 100%; 
-  height:30vh;
+  width: 100%;
+  height: 30vh;
   display: flex;
   justify-content: center;
   align_items: center;
   background-color: ;
-  font-size:28px;
+  font-size: 28px;
   font-weight: 900;
 }
 
+.menu-btn__bar,
+.menu-btn__bar::before,
+.menu-btn__bar::after {
+  content: "";
+  background: var(--black-site);
+  height: 5px;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  z-index: 12;
+  transition: all 0.4s ease-in-out;
+}
+
+.menu-btn__bar::before {
+  top: -10px;
+  z-index: 12;
+}
+
+.menu-btn__bar::after {
+  top: 10px;
+  z-index: 12;
+}
+
+/* Technique pour transformer les 3 barres du bouton de menu en croix*/
+.menu-btn--open .menu-btn__bar,
+.menu-btn--open .menu-btn__bar::before,
+.menu-btn--open .menu-btn__bar::after {
+  transform: rotate(135deg);
+}
+
+.menu-btn--open .menu-btn__bar::before,
+.menu-btn--open .menu-btn__bar::after {
+  transform: rotate(90deg);
+  top: 0;
+}
+
+.menu-btn:not(.menu-btn--open) .menu-btn__bar,
+.menu-btn:not(.menu-btn--open) .menu-btn__bar::before,
+.menu-btn:not(.menu-btn--open) .menu-btn__bar::after {
+  background-color: var(--black-site);
+}
+
+.menu__element{
+  color: var(--white-site);
+  font-family: var(--font-website);
+  font-size: var(--heading-2);
+  font-weight: 500;
+  padding-top: 2rem;
+}
+
+.menu__link {
+  color: rgba(255, 253, 251, 1);
+  font-family: var(--font-website);
+  font-size: var(--heading-2);
+  font-weight: 500;
+  padding-top: 2rem;
+
+}
