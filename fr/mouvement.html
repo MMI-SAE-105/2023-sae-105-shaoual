@@ -1,12 +1,11 @@
 <!DOCTYPE html>
-<html lang="fr" lang="fr" x-data="{menuIsOpen: false}" :class="menuIsOpen && 'noscroll'">
+<html lang="fr" x-data="{menuIsOpen: false}" :class="menuIsOpen && 'noscroll'">
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/src/css/style.css">
-    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
     <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
     <title>Page Title</title>
 </head>
@@ -23,43 +22,37 @@
             <button @click="menuIsOpen = !menuIsOpen">
                 <img class="header__menu" src="../public/icon/menu.svg" alt="ouvrir menu">
             </button>
-            <nav id="mainNav" x-show="menuIsOpen" x-transition.duration.800ms class="menu"></nav>
     
             <!--FIN LOGO-->
     
     
     
             <!--MENU-->
-            <div class="menu__list">
-                <nav id="mainNav" x-show="menuIsOpen" x-transition.duration.1200ms class="menu">
-                    <ul class="menu__elements">
-                        <li class="menu__element">
-                            <a class="menu__link" href="#">
-                                Accueil
-                            </a>
-                        </li>
-                        <hr class="menu__separator">
-                        <li class="menu__element">
-                            <a class="menu__link" href="./mouvement.html">
-                                Gaudíisme
-                            </a>
-                        </li>
-                        <hr class="menu__separator">
-                        <li class="menu__element">
-                            <a class="menu__link" href="./pageArtiste.html">
-                                Artiste
-                            </a>
-                        </li>
-                        <hr class="menu__separator">
-                        <li class="menu__element">
-                            <a class="menu__link" href="./information.html">
-                               information
-                            </a>
-                        </li>
-                    </ul>
-                </nav>
-            </div>
-    
+            <nav id="mainNav" x-show="menuIsOpen" x-transition.duration.1200ms class="menu">
+                <ul class="menu__list">
+                    <li class="menu__element">
+                        <a class="menu__link" href="#">
+                            Accueil
+                        </a>
+                    </li>
+                    <li class="menu__element">
+                        <a class="menu__link" href="./mouvement.html">
+                            Gaudíisme
+                        </a>
+                    </li>
+                    <li class="menu__element">
+                        <a class="menu__link" href="./pageArtiste.html">
+                            Artiste
+                        </a>
+                    </li>
+                    <li class="menu__element">
+                        <a class="menu__link" href="./information.html">
+                            information
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
     </header>
     <!--Fin en-tete page-->
 
